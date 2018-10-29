@@ -6,7 +6,7 @@
 查看驱动版本的方法见[这个链接](https://jingyan.baidu.com/article/eae078276932761fec5485b7.html).
 根据[这里](http://www.cnblogs.com/LearnFromNow/p/9417272.html)的表，判断一下该下哪个版本的CUDA。
 
-![对应的版本](F:\code\c\DataScience\TensorFlow\png\cuda&DriverVersion.png)
+![对应的版本](https://github.com/Alfxjx/DataScience/blob/master/TensorFlow/png/cuda%26DriverVersion.png)
 
 ###对于本机，应该下载的是CUDA 8.0版本。
 下载[CUDA8.0](https://developer.nvidia.com/cuda-downloads)
