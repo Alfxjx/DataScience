@@ -151,7 +151,7 @@ np.savez(frame, array)# zip
 np.random.randn(d0,d1,....,dn) # 有n 表示正态分布
 ~~~
 
-![seed](/seed.JPG)
+![seed](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/seed.JPG)
 
 _seed函数，每次生成相同的随机数组。_
 
