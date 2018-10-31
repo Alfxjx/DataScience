@@ -115,3 +115,88 @@ numpy 函数是对对应元素进行计算
 **总结**
 
 ![np-week1](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/np-week1.JPG)
+
+###单元2
+
+csv文件：存取一维、二维数组
+
+~~~Python
+np.savetxt(frame, array,fmt = '%18e',delimiter=None)#读取
+np.loadtxt(frame, dtype=float,delimiter=None,unpack=false)#写入
+#'%18e' 18位小数的浮点数
+a = np.arange(12).reshape(3,4)
+np.savetxt('a.csv',a,fmt='%d',delimiter=',')
+~~~
+
+~~~Python
+.tofile(frame,sep=",",format='%s')#存
+.fromfile(frame,dtype=float,count=-1,sep='')#取 
+#sep为空，存取的是二进制
+a = np.arange(100).reshape(5,10,2)
+a.tofile("b.dat",sep=",",format='%d')
+~~~
+
+这种方法在存取过程需要知道原始数据的信息，需要新建一个元数据文件，存原始数据的维度信息。
+
+~~~Python
+np.save(frame, array)
+np.load(frame, array)
+np.savez(frame, array)# zip
+#frame = .npy /.npz 格式
+~~~
+
+**随机数函数**
+
+~~~Python
+np.random.randn(d0,d1,....,dn) # 有n 表示正态分布
+~~~
+
+![seed](/seed.JPG)
+
+_seed函数，每次生成相同的随机数组。_
+
+~~~Python
+>>> a = np.random.randint(100,200,(3,4))
+>>> np.random.shuffle(a)
+>>> np.random.permutation(a) #a 不变
+>>> np.random.choice(a,size,replace=false,p=b/np.sum(b))
+~~~
+
+~~~python
+uniform(low,high,size) 
+#产生具有均匀分布的数组,low起始值,high结束值,size形状
+normal(loc,scale,size)
+#产生具有正态分布的数组,loc均值,scale标准差,size形状
+poisson(lam,size)
+#产生具有泊松分布的数组,lam随机事件发生率,size形状
+~~~
+
+**统计函数**
+
+~~~python
+std(a, axis=None) 
+#根据给定轴axis计算数组a相关元素的标准差
+var(a, axis=None)
+#根据给定轴axis计算数组a相关元素的方差
+~~~
+
+**梯度函数**
+~~~python
+>>> a=np.random.randint(0,20,(5))
+>>> a
+array([18, 10, 18,  9, 16])
+>>> np.gradient(a)
+array([-8. ,  0. , -0.5, -1. ,  7. ])
+>>> c= np.random.randint(0,50,(3,5))
+
+>>> c #二维数组？？？？
+array([[11, 44, 10, 38, 20],
+       [46, 33, 19, 13, 33],
+       [ 7, 32, 22, 19, 38]])
+>>> np.gradient(c)
+[array([[ 35. , -11. ,   9. , -25. ,  13. ],
+       [ -2. ,  -6. ,   6. ,  -9.5,   9. ],
+       [-39. ,  -1. ,   3. ,   6. ,   5. ]]), array([[ 33. ,  -0.5,  -3. ,   5. , -18. ],
+       [-13. , -13.5, -10. ,   7. ,  20. ],
+       [ 25. ,   7.5,  -6.5,   8. ,  19. ]])]
+~~~
