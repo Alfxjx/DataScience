@@ -109,7 +109,9 @@ array([[[0.        , 0.08695652, 0.17391304, 0.26086957],
         [1.73913043, 1.82608696, 1.91304348, 2.        ]]])
 ~~~
 _注意数组是否真实改变_
+
 numpy 函数是对对应元素进行计算
+
 **总结**
 
-![np-week1](/np-week1.JPG)
+![np-week1](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/np-week1.JPG)
