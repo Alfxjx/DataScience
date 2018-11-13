@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quandl-response>
+  <dataset>
+    <id type="integer">35366971</id>
+    <dataset-code>M550_SALES</dataset-code>
+    <database-code>ZILLOW</database-code>
+    <name>Zillow Home Value Index (Metro): Home Sales (NSA) - Morehead City, NC</name>
+    <description>The Zillow Home Value Index is Zillow's estimate of the median market value of home sales (nsa) within the metro of Morehead City, NC. This data is calculated by Zillow Real Estate Research (www.zillow.com/research) using their database of 110 million homes.</description>
+    <refreshed-at type="dateTime">2017-05-24T05:14:00Z</refreshed-at>
+    <newest-available-date type="date">2016-06-30</newest-available-date>
+    <oldest-available-date type="date">2008-06-30</oldest-available-date>
+    <column-names type="array">
+      <column-name>Date</column-name>
+      <column-name>Value</column-name>
+    </column-names>
+    <frequency>monthly</frequency>
+    <type>Time Series</type>
+    <premium type="boolean">false</premium>
+    <limit nil="true"/>
+    <transform nil="true"/>
+    <column-index nil="true"/>
+    <start-date type="date">2008-06-30</start-date>
+    <end-date type="date">2016-06-30</end-date>
+    <data type="array">
+      <datum type="array">
+        <datum type="date">2016-06-30</datum>
+        <datum type="float">64.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2016-05-31</datum>
+        <datum type="float">163.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2016-04-30</datum>
+        <datum type="float">118.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2016-03-31</datum>
+        <datum type="float">110.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2016-02-29</datum>
+        <datum type="float">83.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2016-01-31</datum>
+        <datum type="float">82.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-12-31</datum>
+        <datum type="float">123.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-11-30</datum>
+        <datum type="float">98.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-10-31</datum>
+        <datum type="float">123.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-09-30</datum>
+        <datum type="float">123.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-08-31</datum>
+        <datum type="float">152.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-07-31</datum>
+        <datum type="float">159.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-06-30</datum>
+        <datum type="float">162.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-05-31</datum>
+        <datum type="float">129.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-04-30</datum>
+        <datum type="float">124.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-03-31</datum>
+        <datum type="float">107.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-02-28</datum>
+        <datum type="float">89.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2015-01-31</datum>
+        <datum type="float">76.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-12-31</datum>
+        <datum type="float">115.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-11-30</datum>
+        <datum type="float">89.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-10-31</datum>
+        <datum type="float">124.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-09-30</datum>
+        <datum type="float">145.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-08-31</datum>
+        <datum type="float">139.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-07-31</datum>
+        <datum type="float">116.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-06-30</datum>
+        <datum type="float">130.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-05-31</datum>
+        <datum type="float">96.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-04-30</datum>
+        <datum type="float">97.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-03-31</datum>
+        <datum type="float">95.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-02-28</datum>
+        <datum type="float">62.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2014-01-31</datum>
+        <datum type="float">62.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-12-31</datum>
+        <datum type="float">101.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-11-30</datum>
+        <datum type="float">76.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-10-31</datum>
+        <datum type="float">99.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-09-30</datum>
+        <datum type="float">104.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-08-31</datum>
+        <datum type="float">122.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-07-31</datum>
+        <datum type="float">127.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-06-30</datum>
+        <datum type="float">121.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-05-31</datum>
+        <datum type="float">122.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-04-30</datum>
+        <datum type="float">138.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-03-31</datum>
+        <datum type="float">109.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-02-28</datum>
+        <datum type="float">79.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2013-01-31</datum>
+        <datum type="float">74.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-12-31</datum>
+        <datum type="float">116.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-11-30</datum>
+        <datum type="float">108.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-10-31</datum>
+        <datum type="float">116.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-09-30</datum>
+        <datum type="float">104.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-08-31</datum>
+        <datum type="float">114.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-07-31</datum>
+        <datum type="float">116.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-06-30</datum>
+        <datum type="float">108.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-05-31</datum>
+        <datum type="float">97.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-04-30</datum>
+        <datum type="float">92.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-03-31</datum>
+        <datum type="float">102.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-02-29</datum>
+        <datum type="float">61.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2012-01-31</datum>
+        <datum type="float">65.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-12-31</datum>
+        <datum type="float">78.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-11-30</datum>
+        <datum type="float">60.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-10-31</datum>
+        <datum type="float">68.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-09-30</datum>
+        <datum type="float">96.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-08-31</datum>
+        <datum type="float">78.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-07-31</datum>
+        <datum type="float">89.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-06-30</datum>
+        <datum type="float">88.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-05-31</datum>
+        <datum type="float">82.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-04-30</datum>
+        <datum type="float">86.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-03-31</datum>
+        <datum type="float">93.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-02-28</datum>
+        <datum type="float">69.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2011-01-31</datum>
+        <datum type="float">57.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-12-31</datum>
+        <datum type="float">81.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-11-30</datum>
+        <datum type="float">60.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-10-31</datum>
+        <datum type="float">73.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-09-30</datum>
+        <datum type="float">78.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-08-31</datum>
+        <datum type="float">82.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-07-31</datum>
+        <datum type="float">90.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-06-30</datum>
+        <datum type="float">94.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-05-31</datum>
+        <datum type="float">98.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-04-30</datum>
+        <datum type="float">106.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-03-31</datum>
+        <datum type="float">82.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-02-28</datum>
+        <datum type="float">54.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2010-01-31</datum>
+        <datum type="float">62.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-12-31</datum>
+        <datum type="float">75.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-11-30</datum>
+        <datum type="float">75.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-10-31</datum>
+        <datum type="float">74.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-09-30</datum>
+        <datum type="float">81.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-08-31</datum>
+        <datum type="float">71.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-07-31</datum>
+        <datum type="float">85.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-06-30</datum>
+        <datum type="float">92.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-05-31</datum>
+        <datum type="float">87.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-04-30</datum>
+        <datum type="float">80.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-03-31</datum>
+        <datum type="float">68.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-02-28</datum>
+        <datum type="float">57.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2009-01-31</datum>
+        <datum type="float">53.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2008-12-31</datum>
+        <datum type="float">61.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2008-11-30</datum>
+        <datum type="float">46.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2008-10-31</datum>
+        <datum type="float">88.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2008-09-30</datum>
+        <datum type="float">85.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2008-08-31</datum>
+        <datum type="float">112.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2008-07-31</datum>
+        <datum type="float">103.0</datum>
+      </datum>
+      <datum type="array">
+        <datum type="date">2008-06-30</datum>
+        <datum type="float">100.0</datum>
+      </datum>
+    </data>
+    <collapse nil="true"/>
+    <order nil="true"/>
+    <database-id type="integer">15209</database-id>
+  </dataset>
+</quandl-response>
