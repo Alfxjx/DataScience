@@ -1,4 +1,5 @@
 #Python数据分析与展示笔记
+
 ##第0周
 
 ~~~python
@@ -15,12 +16,14 @@ a?
 %who
 #查看与删除变量
 ~~~
+
 ##第一周
-- 一维数据：列表、集合
+
+- - 一维数据：列表、集合
 - 二维数据：列表
 - 高维数据：字典数据表示，json等
 
-**Numpy** n维数组对象---ndarray
+### **Numpy** n维数组对象---ndarray
 
 ~~~python
 import numpy as np
@@ -35,7 +38,7 @@ def npsum():
 - 轴axis（数据的维度）
 - 秩rank（维度的数量）
 
-**ndarray数组创建方法**
+### **ndarray数组创建方法**
 
 ~~~python
 x = np.array([1,2],(2,3))
@@ -61,7 +64,8 @@ np.concatenate()
 .astype(shape)#类型转变，必创建新数组
 ~~~
 
-**数组的索引和切片**
+### **数组的索引和切片**
+
 ~~~python
 #索引
 a = np.arange(24).reshape((2,3,4))
@@ -93,7 +97,8 @@ array([[[ 0,  2],
         [20, 22]]])
 ~~~
 
-**ndarray数组运算**
+### **ndarray数组运算**
+
 ~~~python
 #数组与标量计算
 a = np.arange(24).reshape((2,3,4))
@@ -112,13 +117,11 @@ _注意数组是否真实改变_
 
 numpy 函数是对对应元素进行计算
 
-**总结**
+### **小结**
 
 ![np-week1](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/np-week1.JPG)
 
-###单元2
-
-csv文件：存取一维、二维数组
+### **csv文件：存取一维、二维数组**
 
 ~~~Python
 np.savetxt(frame, array,fmt = '%18e',delimiter=None)#读取
@@ -145,7 +148,7 @@ np.savez(frame, array)# zip
 #frame = .npy /.npz 格式
 ~~~
 
-**随机数函数**
+### **随机数函数**
 
 ~~~Python
 np.random.randn(d0,d1,....,dn) # 有n 表示正态分布
@@ -171,7 +174,7 @@ poisson(lam,size)
 #产生具有泊松分布的数组,lam随机事件发生率,size形状
 ~~~
 
-**统计函数**
+### **统计函数**
 
 ~~~python
 std(a, axis=None) 
@@ -180,7 +183,7 @@ var(a, axis=None)
 #根据给定轴axis计算数组a相关元素的方差
 ~~~
 
-**梯度函数**
+### **梯度函数**
 ~~~python
 >>> a=np.random.randint(0,20,(5))
 >>> a
@@ -200,3 +203,135 @@ array([[11, 44, 10, 38, 20],
        [-13. , -13.5, -10. ,   7. ,  20. ],
        [ 25. ,   7.5,  -6.5,   8. ,  19. ]])]
 ~~~
+
+
+##第二周
+###Matplotlib
+```python
+import matplotlib.pyplot as plt
+plt.plot((xList,)yList（， ‘—-’）)
+plt. show()
+plt.savefig(‘test’,dpi=300) #.png
+plt.axis(xStart,xEnd,yStart,yEnd)#图的坐标轴范围
+plt.subplot(nrows,ncols,plot_number)#横轴数，纵轴数，绘图区域序号
+```
+
+###plot()函数
+```python
+plt.plot(x,y,format_string,**kwargs)
+#可绘制多条曲线，此时x是必须的
+#format_string 格式：颜色/风格/标记字符
+```
+format_string
+颜色：’b’ 蓝色‘w’白色 ’#444’
+风格：’-‘/’—‘/’-.‘ etc.
+标记：’.’/‘,’/‘o’/‘v’/‘^’/‘>’/‘<‘/‘1’ etc.
+```python
+#example
+a = np.arange(10)
+plt.plot(a,a*1.5,’go-‘,a,a*2.5,’r-‘) # g means green
+#markerfacecolor 只改变标记的颜色，使得线与标记颜色不一样
+```
+###plot() 中文显示
+```python
+import matplotlib
+matplotlib.rcParams[‘font.family’]=‘SImHei’#黑体
+#font.family字体
+#font_size大小
+#font.style斜体，加粗等风格
+plt.xlabel(‘横轴：时间’)
+
+#只改变输出的字体，在有中文输出的位置，加入fontproperties
+plt.xlabel(‘横轴：时间’,fontproperties=‘SimHei’,font.size = 20)
+```
+###pyplot文本显示方法
+```python
+plt.title(r’余弦函数实例 $ y = cos(2\pi x) $’,fontproperties = ‘SimHei’,font.size = 20)
+#  $ $ 属于Latex表示方法
+plt.xlabel()
+plt.text(2, 1, r’$\mu=100’ ,font.size = 10)#任意位置文本
+plt.anotate(‘this is ‘, xy=(2,1), xytext=(3,1.5), arrowprops = dict(facecolor = ‘black’,shrink = 0.1, width = 3))
+#带箭头的注释 shrink 表示箭头指向的缩进
+```
+###子绘图区域设计方法
+```python
+plt.subplot2grid((3,3),(1,0),colspan=2)
+# 区域分为3x3的区域，选中第二行第一个，长度为2个格子
+#colspan/rowspan
+import matplotlib.gridspec as gridspec
+gs = grispec.GridSpec(3,3)
+ax1 = plt.subplot(gs[0,:])
+```
+###16种常用pyplot函数方法
+```python
+plt.plot()
+plt.bar()
+plt.polar()
+plt.pie()
+plt.psd()#功率谱密度图
+plt.scatter()#散点图
+plt.hist()#直方图
+plt.plot_date()#图表日期
+```
+###饼图
+```python
+import matplotlib.pyplot as plt
+labels = '1','2','3','4'
+#尺寸
+sizes = [15,30,45,10]
+#突出
+explode = (0,0.1,0,0)
+#auotopct 百分数显示方式
+#startangle 起始角度
+plt.pie(sizes,explode = explode,labels = labels,autopct = '%1.1f%%',shadow = False,startangle = 90)
+#变成正圆---todo
+plt.axis('equal')
+plt.show()
+```
+![pieEqual](https://github.com/Alfxjx/DataScience/tree/master/pyDV/pic/pieEqual.png)
+
+###直方图
+
+```python
+np.random.seed(0)
+mu,sigma = 100,20 # 均值和标准差
+a = np.random.normal(mu, sigma, size=100)
+#bin:直方图个数
+# normed =0 显示个数 =1归一化
+# alpha尺寸比例
+plt.hist(a,bin=10,normed=1,histtype='stepfilled', facecolor='b', alpha = 0.75)
+plt.title('Histogram')
+```
+![histograml](https://github.com/Alfxjx/DataScience/tree/master/pyDV/pic/histogram.png)
+
+###极坐标图
+
+面向对象的绘制方法
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+N=10
+theta=np.linspace(0.0,2*np.pi,N,endpoint=False)
+radii=10*np.random.rand(N)
+width=np.pi/2*np.random.rand(N)
+ax = plt.subplot(111,projection='polar')
+bars = ax.bar(theta,radii,width,bottom=0.0)
+for r, bar in zip(radii,bars):
+    bar.set_facecolor(plt.cm.viridis(r/10.))
+    bar.set_alpha(0.5)
+```
+![polar](https://github.com/Alfxjx/DataScience/tree/master/pyDV/pic/polar.png)
+
+###散点图
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+#建立一个fig对象，建立一个axis对象。
+fig,ax = plt.subplots()
+ax.plot(10*np.random.randn(100), 10*np.random.randn(100),'o')
+ax.set_title('Simple Scatter')
+plt.show()
+```
+![simple scatterl](https://github.com/Alfxjx/DataScience/tree/master/pyDV/pic/simpleScatter.png)
