@@ -1,5 +1,6 @@
 #Python数据分析与展示笔记
 
+
 ##第0周
 
 ~~~python
@@ -288,7 +289,7 @@ plt.pie(sizes,explode = explode,labels = labels,autopct = '%1.1f%%',shadow = Fal
 plt.axis('equal')
 plt.show()
 ```
-![pieEqual](https://github.com/Alfxjx/DataScience/tree/master/pyDV/pic/pieEqual.png)
+![pieEqual](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/pieEqual.png)
 
 ###直方图
 
@@ -302,7 +303,7 @@ a = np.random.normal(mu, sigma, size=100)
 plt.hist(a,bin=10,normed=1,histtype='stepfilled', facecolor='b', alpha = 0.75)
 plt.title('Histogram')
 ```
-![histograml](https://github.com/Alfxjx/DataScience/tree/master/pyDV/pic/histogram.png)
+![histograml](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/histogram.png)
 
 ###极坐标图
 
@@ -321,7 +322,7 @@ for r, bar in zip(radii,bars):
     bar.set_facecolor(plt.cm.viridis(r/10.))
     bar.set_alpha(0.5)
 ```
-![polar](https://github.com/Alfxjx/DataScience/tree/master/pyDV/pic/polar.png)
+![polar](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/polar.png)
 
 ###散点图
 
@@ -334,4 +335,4 @@ ax.plot(10*np.random.randn(100), 10*np.random.randn(100),'o')
 ax.set_title('Simple Scatter')
 plt.show()
 ```
-![simple scatterl](https://github.com/Alfxjx/DataScience/tree/master/pyDV/pic/simpleScatter.png)
+![simple scatterl](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/simpleScatter.png)
