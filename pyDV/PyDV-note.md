@@ -1,7 +1,7 @@
-#Python数据分析与展示笔记
+# Python数据分析与展示笔记
 
 
-##第0周
+## 第0周
 
 ~~~python
 import numpy as np
@@ -18,7 +18,7 @@ a?
 #查看与删除变量
 ~~~
 
-##第一周
+## 第一周
 
 - - 一维数据：列表、集合
 - 二维数据：列表
@@ -98,7 +98,7 @@ array([[[ 0,  2],
         [20, 22]]])
 ~~~
 
-### **ndarray数组运算**
+###  **ndarray数组运算**
 
 ~~~python
 #数组与标量计算
@@ -118,7 +118,7 @@ _注意数组是否真实改变_
 
 numpy 函数是对对应元素进行计算
 
-### **小结**
+###  **小结**
 
 ![np-week1](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/np-week1.JPG)
 
@@ -206,8 +206,10 @@ array([[11, 44, 10, 38, 20],
 ~~~
 
 
-##第二周
-###Matplotlib
+## 第二周
+
+### Matplotlib
+
 ```python
 import matplotlib.pyplot as plt
 plt.plot((xList,)yList（， ‘—-’）)
@@ -217,7 +219,8 @@ plt.axis(xStart,xEnd,yStart,yEnd)#图的坐标轴范围
 plt.subplot(nrows,ncols,plot_number)#横轴数，纵轴数，绘图区域序号
 ```
 
-###plot()函数
+### plot()函数
+
 ```python
 plt.plot(x,y,format_string,**kwargs)
 #可绘制多条曲线，此时x是必须的
@@ -233,7 +236,8 @@ a = np.arange(10)
 plt.plot(a,a*1.5,’go-‘,a,a*2.5,’r-‘) # g means green
 #markerfacecolor 只改变标记的颜色，使得线与标记颜色不一样
 ```
-###plot() 中文显示
+### plot() 中文显示
+
 ```python
 import matplotlib
 matplotlib.rcParams[‘font.family’]=‘SImHei’#黑体
@@ -245,7 +249,8 @@ plt.xlabel(‘横轴：时间’)
 #只改变输出的字体，在有中文输出的位置，加入fontproperties
 plt.xlabel(‘横轴：时间’,fontproperties=‘SimHei’,font.size = 20)
 ```
-###pyplot文本显示方法
+### pyplot文本显示方法
+
 ```python
 plt.title(r’余弦函数实例 $ y = cos(2\pi x) $’,fontproperties = ‘SimHei’,font.size = 20)
 #  $ $ 属于Latex表示方法
@@ -254,7 +259,8 @@ plt.text(2, 1, r’$\mu=100’ ,font.size = 10)#任意位置文本
 plt.anotate(‘this is ‘, xy=(2,1), xytext=(3,1.5), arrowprops = dict(facecolor = ‘black’,shrink = 0.1, width = 3))
 #带箭头的注释 shrink 表示箭头指向的缩进
 ```
-###子绘图区域设计方法
+### 子绘图区域设计方法
+
 ```python
 plt.subplot2grid((3,3),(1,0),colspan=2)
 # 区域分为3x3的区域，选中第二行第一个，长度为2个格子
@@ -263,7 +269,8 @@ import matplotlib.gridspec as gridspec
 gs = grispec.GridSpec(3,3)
 ax1 = plt.subplot(gs[0,:])
 ```
-###16种常用pyplot函数方法
+### 16种常用pyplot函数方法
+
 ```python
 plt.plot()
 plt.bar()
@@ -274,7 +281,8 @@ plt.scatter()#散点图
 plt.hist()#直方图
 plt.plot_date()#图表日期
 ```
-###饼图
+### 饼图
+
 ```python
 import matplotlib.pyplot as plt
 labels = '1','2','3','4'
@@ -291,7 +299,7 @@ plt.show()
 ```
 ![pieEqual](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/pieEqual.png)
 
-###直方图
+### 直方图
 
 ```python
 np.random.seed(0)
@@ -305,7 +313,7 @@ plt.title('Histogram')
 ```
 ![histograml](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/histogram.png)
 
-###极坐标图
+### 极坐标图
 
 面向对象的绘制方法
 
@@ -324,7 +332,7 @@ for r, bar in zip(radii,bars):
 ```
 ![polar](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/polar.png)
 
-###散点图
+### 散点图
 
 ```python
 import numpy as np
@@ -336,3 +344,50 @@ ax.set_title('Simple Scatter')
 plt.show()
 ```
 ![simple scatterl](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/simpleScatter.png)
+
+### 引力波绘制
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.io import wavfile
+ 
+rate_h, hstrain= wavfile.read(r"F:\\code\\c\\DataScience\\pyDV\\grawave\\H1_Strain.wav","rb")
+rate_l, lstrain= wavfile.read(r"F:\\code\\c\\DataScience\\pyDV\\grawave\\L1_Strain.wav","rb")
+#reftime, ref_H1 = np.genfromtxt('GW150914_4_NR_waveform_template.txt').transpose()
+reftime, ref_H1 = np.genfromtxt('F:\\code\\c\\DataScience\\pyDV\\grawave\\wf_template.txt').transpose() #使用python123.io下载文件
+ 
+htime_interval = 1/rate_h
+ltime_interval = 1/rate_l
+fig = plt.figure(figsize=(12, 6))
+ 
+# 丢失信号起始点
+htime_len = hstrain.shape[0]/rate_h
+htime = np.arange(-htime_len/2, htime_len/2 , htime_interval)
+plth = fig.add_subplot(221)
+plth.plot(htime, hstrain, 'y')
+plth.set_xlabel('Time (seconds)')
+plth.set_ylabel('H1 Strain')
+plth.set_title('H1 Strain')
+ 
+ltime_len = lstrain.shape[0]/rate_l
+ltime = np.arange(-ltime_len/2, ltime_len/2 , ltime_interval)
+pltl = fig.add_subplot(222)
+pltl.plot(ltime, lstrain, 'g')
+pltl.set_xlabel('Time (seconds)')
+pltl.set_ylabel('L1 Strain')
+pltl.set_title('L1 Strain')
+ 
+pltref = fig.add_subplot(212)
+pltref.plot(reftime, ref_H1)
+pltref.set_xlabel('Time (seconds)')
+pltref.set_ylabel('Template Strain')
+pltref.set_title('Template')
+fig.tight_layout()
+ 
+plt.savefig("F:\\code\\c\\DataScience\\pyDV\\pic\\Gravitational_Waves_Original.png")
+plt.show()
+#plt.close(fig)
+```
+
+![grawave](https://github.com/Alfxjx/DataScience/blob/master/pyDV/pic/grawave.png)
